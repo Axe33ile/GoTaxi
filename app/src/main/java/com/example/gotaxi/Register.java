@@ -18,7 +18,21 @@ public class Register extends AppCompatActivity {
         //status bar color
         getSupportActionBar().hide();           //hide intent title.
 
+/*            *******************************************
+                        VARIABLE DECLARATION
+              *******************************************
+ */
 
+
+
+
+
+
+
+/*            *******************************************
+                SPINNER SPINNER SPINNER SPINNER SPINNER
+              *******************************************
+ */
 //        Spinner
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
