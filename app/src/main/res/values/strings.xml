@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GoTaxi</string>
+    <string-array name="planets_array">
+        <item>Costumer</item>
+        <item>Driver</item>
+    </string-array>
 </resources>
