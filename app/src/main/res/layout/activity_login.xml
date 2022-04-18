@@ -118,7 +118,7 @@
         app:srcCompat="@drawable/write_box" />
 
     <Button
-        android:id="@+id/SignInButton"
+        android:id="@+id/signInButton1"
         android:layout_width="166dp"
         android:layout_height="53dp"
         android:backgroundTint="#F5D367"

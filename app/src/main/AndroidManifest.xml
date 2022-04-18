@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoTaxi">
+
         <activity
             android:name=".Register"
             android:exported="false" />
@@ -17,6 +18,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity1"
+            android:usesCleartextTraffic="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

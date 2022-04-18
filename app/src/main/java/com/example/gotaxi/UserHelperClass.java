@@ -8,8 +8,8 @@ package com.example.gotaxi;
  */
 public class UserHelperClass {
     //Attributes
-    private String user_name,user_email, user_phone, parkingSpot, message;
-    private boolean isAdmin;
+    private String user_email, password,user_phone, message;
+    private boolean isDriver;
     int messageType;
 
     //constructor - must create empty constructor
@@ -17,13 +17,12 @@ public class UserHelperClass {
 
     }
     //constructor
-    public UserHelperClass(String user_name, String user_email, String user_phone, String parkingSpot, String message, int messageType, boolean isAdmin) {
-        this.user_name = user_name; // user name
+    public UserHelperClass( String user_email, String user_phone,String password, String message, int messageType, boolean isDriver) {
         this.user_email = user_email; // email user entered
         this.user_phone = user_phone; //phone number from the user
-        this.parkingSpot = parkingSpot; // parking spot the user parked the bike
+        this.password = password;
         this.messageType = messageType; //0 -> כללי 1-> תשלום 2-> תיקון
-        this.isAdmin = isAdmin;
+        this.isDriver= isDriver;
         this.message = ""; //staring message from empty
     }
 
@@ -36,12 +35,13 @@ public class UserHelperClass {
         this.messageType = messageType;
     }
 
-    public String getUser_name() {
-        return user_name;
+
+    public String getPassword() {
+        return password;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUser_email() {
@@ -60,13 +60,6 @@ public class UserHelperClass {
         this.user_phone = user_phone;
     }
 
-    public String getParkingSpot() {
-        return parkingSpot;
-    }
-
-    public void setParkingSpot(String parkingSpot) {
-        this.parkingSpot = parkingSpot;
-    }
 
     public String getMessage() {
         return message;
@@ -76,14 +69,14 @@ public class UserHelperClass {
         this.message = message;
     }
 
-    //if we will write the getters as 'isAdmin' it will create a problem during running.
-    public boolean getIsAdmin() { return isAdmin; }
+    //if we will write the getters as 'isDriver' it will create a problem during running.
+    public boolean getIsDriver() { return isDriver; }
 
-    public void setAdmin(boolean isAdmin) { this.isAdmin = isAdmin; }
+    public void setAdmin(boolean isDriver) { this.isDriver = isDriver; }
 
     //ToString
     public String messageString() {
-        return this.getUser_name() + " " + this.getUser_phone() + " \n" + this.getMessage();
+        return   this.getUser_phone() + " \n" + this.getMessage();
 
     }
 }

@@ -93,7 +93,7 @@
 
     <!--    password   -->
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,19 +116,7 @@
         app:layout_constraintVertical_bias="0.423"
         app:srcCompat="@drawable/write_box" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522"
-        app:srcCompat="@drawable/write_box" />
-
-<!--    mail -->
+    <!--    mail -->
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
@@ -168,18 +156,6 @@
         app:srcCompat="@drawable/eye" />
 
 
-    <ImageView
-        android:id="@+id/eye2"
-        android:layout_width="38dp"
-        android:layout_height="33dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52"
-        app:srcCompat="@drawable/eye" />
-
     <Button
         android:id="@+id/register"
         android:layout_width="166dp"
@@ -216,20 +192,6 @@
 
 <!--    phone block -->
 
-    <EditText
-        android:id="@+id/rep_reg_user_password"
-        android:layout_width="177dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="**********"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.612"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/phone1"
         android:layout_width="38dp"
@@ -257,7 +219,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/regEmailAddress"
         android:layout_width="177dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -271,7 +233,7 @@
 
 <!--    Spinner section , user choose between driver and customer -->
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner1"
         android:layout_width="285dp"
         android:layout_height="33dp"
         android:textColor="#FF0000"

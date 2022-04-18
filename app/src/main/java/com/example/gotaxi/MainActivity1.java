@@ -20,7 +20,6 @@ public class MainActivity1 extends AppCompatActivity {
         getSupportActionBar().hide();           //hide intent title.
 
         //status bar color
-        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity1.this, R.color.white));
 
         //move the user into another intent
         new Handler().postDelayed(new Runnable() {
