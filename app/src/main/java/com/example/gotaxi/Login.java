@@ -86,7 +86,7 @@ public class Login extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.exists()) {//If phonenumber exists in DB
                             emailfromDB = snapshot.child(user_phone).child("user_email").getValue(String.class).trim();//pull email from realtime DB to use in Auth
-                            String user_name_fromDB = snapshot.child(user_phone).child("user_name").getValue(String.class).trim();//get the user_name from the phone_number we get.
+//                            String user_name_fromDB = snapshot.child(user_phone).child("user_name").getValue(String.class).trim();//get the user_name from the phone_number we get.
                             //if login successful go to welcome session
                             mAuth.signInWithEmailAndPassword(emailfromDB, password)
                                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -94,9 +94,8 @@ public class Login extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<AuthResult> task) {
                                             if (task.isSuccessful()) {
                                                 //calling intro activity.
-                                                Intent intent = new Intent(getApplicationContext(), Login.class);
+                                                Intent intent = new Intent(getApplicationContext(), WelcomeSession.class);
                                                 intent.putExtra("user_phone", user_phone);
-                                                intent.putExtra("user_name", user_name_fromDB);
                                                 intent.putExtra("user_email", emailfromDB);
                                                 startActivity(intent);//if it exists move to welcome Session intent
                                             } else {
