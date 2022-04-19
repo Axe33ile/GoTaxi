@@ -1,10 +1,12 @@
-package com.example.gotaxi;
+package com.example.gotaxi.Login_Register;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,13 +16,12 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.gotaxi.R;
+import com.example.gotaxi.DatabaseUser.UserHelperClass;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -90,6 +91,38 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 String email = regEmail.getText().toString();
                 String password = regPassword.getText().toString();
                 String phoneNum = regphoneNumber.getText().toString();
+
+                if (TextUtils.isEmpty(email)) {
+                    regEmail.setError("יש לציין אימייל");
+                    return;
+                }
+                if (TextUtils.isEmpty(password)) {
+                    regPassword.setError("יש למלא סיסמא");
+                    return;
+                }
+                if (password.length() < 6) {
+                    regPassword.setError("הסיסמא חייבת להכיל לפחות 6 תווים");
+                    return;
+                }
+                if (phoneNum.length() != 10) {
+                    regphoneNumber.setError("מספר הטלפון צריך להיות בעל 10 ספרות");
+                    return;
+                }
+                if (phoneNum.charAt(0) != '0' || phoneNum.charAt(1) != '5') {
+                    regphoneNumber.setError("מספר הטלפון צריך להתחיל ב05 וספרה נוספת");
+                    return;
+                }
+                for (int i = 0; i < 8; i++) {
+                    if (phoneNum.charAt(i) < '0' || phoneNum.charAt(i) > '9') {
+                        regphoneNumber.setError("ספרה לא תקינה במספר הטלפון");
+                        return;
+                    }
+                }
+                //בדיקת אימייל תקין
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    regEmail.setError("הכנס אימייל תקין");
+                    return;
+                }
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override

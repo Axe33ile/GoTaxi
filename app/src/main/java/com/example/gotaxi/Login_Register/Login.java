@@ -1,4 +1,4 @@
-package com.example.gotaxi;
+package com.example.gotaxi.Login_Register;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.gotaxi.R;
+import com.example.gotaxi.Navigation.WelcomeSession;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

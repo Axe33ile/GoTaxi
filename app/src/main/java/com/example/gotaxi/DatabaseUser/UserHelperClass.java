@@ -1,4 +1,4 @@
-package com.example.gotaxi;
+package com.example.gotaxi.DatabaseUser;
 
 /*
                         UserHelperClass.java ---> INFORMATION

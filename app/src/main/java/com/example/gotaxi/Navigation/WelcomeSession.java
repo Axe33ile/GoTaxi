@@ -1,4 +1,4 @@
-package com.example.gotaxi;
+package com.example.gotaxi.Navigation;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.example.gotaxi.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,7 +53,9 @@ public class WelcomeSession extends AppCompatActivity {
                     //buffer wait to retrieve data from data base.
                     if (isDriver) {
                         //if you are manager you cant go to admin session.
-                        man.setVisibility(ImageView.VISIBLE);
+                        passenger.setVisibility(ImageView.GONE);
+                    }else{
+                        driver.setVisibility(ImageView.GONE);
                     }
                 }
             }

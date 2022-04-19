@@ -1,4 +1,4 @@
-package com.example.gotaxi;
+package com.example.gotaxi.Navigation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+
+import com.example.gotaxi.Login_Register.Login;
+import com.example.gotaxi.R;
 
 public class MainActivity1 extends AppCompatActivity {
     private static int SPLASH_SCREEN = 1000; //2000milisec ==> 2 sec

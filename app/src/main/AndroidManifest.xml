@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoTaxi">
         <activity
-            android:name=".WelcomeSession"
+            android:name=".Navigation.WelcomeSession"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".Login_Register.Register"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".Login_Register.Login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity1"
+            android:name=".Navigation.MainActivity1"
             android:exported="true"
             android:usesCleartextTraffic="true">
             <intent-filter>
